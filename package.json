@@ -1,0 +1,94 @@
+{
+  "name": "chatUI",
+  "version": "0.1.0",
+  "author": "shari",
+  "license": "MIT",
+  "main": "dist/index.js",
+  "module": "dist/index.es.js",
+  "engines": {
+    "node": ">=8",
+    "npm": ">=5"
+  },
+  "dependencies": {
+    "@testing-library/jest-dom": "^4.2.4",
+    "@testing-library/react": "^9.3.2",
+    "@testing-library/user-event": "^7.1.2",
+    "babel-preset-stage-0": "^6.24.1",
+    "styled-components": "^5.1.1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/wuzixuan1104/chatUI.git"
+  },
+  "scripts": {
+    "build": "rollup -c",
+    "start": "rollup -c -w",
+    "test": "react-scripts test",
+    "eject": "react-scripts eject",
+    "book": "start-storybook -p 9009",
+    "build-storybook": "build-storybook",
+    "lint": "eslint --fix ."
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "yarn lint",
+      "commit-msg": "commitlint -E HUSKY_GIT_PARAMS"
+    }
+  },
+  "eslintConfig": {
+    "extends": "react-app"
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  },
+  "peerDependencies": {
+    "prop-types": "^15.5.4",
+    "react": "^16.13.1",
+    "react-dom": "^16.13.1",
+    "styled-components": "^5.1.1"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.10.3",
+    "@babel/plugin-external-helpers": "^7.10.1",
+    "@babel/preset-env": "^7.10.3",
+    "@babel/preset-react": "^7.10.1",
+    "@commitlint/cli": "^9.0.1",
+    "@commitlint/config-conventional": "^9.0.1",
+    "@rollup/plugin-babel": "^5.0.3",
+    "@rollup/plugin-commonjs": "^13.0.0",
+    "@rollup/plugin-node-resolve": "^8.0.1",
+    "@rollup/plugin-url": "^5.0.1",
+    "@storybook/addon-actions": "^5.3.19",
+    "@storybook/addon-links": "^5.3.19",
+    "@storybook/addons": "^5.3.19",
+    "@storybook/preset-create-react-app": "^3.1.2",
+    "@storybook/react": "^5.3.19",
+    "babel-eslint": "^10.1.0",
+    "babel-plugin-styled-components": "^1.10.7",
+    "eslint": "6.8.0",
+    "eslint-config-airbnb": "^18.2.0",
+    "eslint-config-airbnb-base": "^14.2.0",
+    "eslint-config-prettier": "^6.11.0",
+    "eslint-config-react-app": "^5.2.1",
+    "eslint-plugin-import": "^2.21.2",
+    "eslint-plugin-jsx-a11y": "^6.3.1",
+    "eslint-plugin-prettier": "^3.1.4",
+    "eslint-plugin-react": "^7.20.0",
+    "husky": "^4.2.5",
+    "prettier": "2.0.5",
+    "react": "^16.13.1",
+    "react-dom": "^16.13.1",
+    "react-scripts": "3.4.1",
+    "rollup": "^2.17.1",
+    "rollup-plugin-peer-deps-external": "^2.2.2"
+  }
+}
