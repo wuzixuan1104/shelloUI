@@ -1,7 +1,8 @@
 import React from 'react';
 import { storiesOf } from '@storybook/react';
 
-import Card from './index';
+import CardList from './index';
+import Card from '../Card/index';
 
 const cardDemo = [
   {
@@ -21,19 +22,14 @@ const cardDemo = [
   },
 ];
 
-storiesOf('Card', module).add('Basic', () =>
-  React.createElement(() => {
-    return (
-      <div>
-        {cardDemo.map((e, i) => {
-          return (
-            <div key={i}>
-              <Card {...e} />
-              <br></br>
-            </div>
-          );
-        })}
-      </div>
-    );
-  }),
-);
+storiesOf('CardList', module).add('Basic', () => {
+  return (
+    <React.Fragment>
+      <CardList title={'Shello 的起源'}>
+        {cardDemo.map((v, i) => (
+          <Card key={i} {...v}></Card>
+        ))}
+      </CardList>
+    </React.Fragment>
+  );
+});

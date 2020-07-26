@@ -4,7 +4,6 @@ const Wrapper = styled('div')`
   position: relative;
   display: flex;
   flex-direction: column;
-  width: ${(props) => (props.width || 256) + 'px'};
   padding: 6px 8px;
   background: rgba(255, 255, 255, 1);
   box-shadow: 0 1px 0 rgba(9, 30, 66, 0.25);
