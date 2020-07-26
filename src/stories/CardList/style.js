@@ -11,7 +11,6 @@ const Wrapper = styled('div')`
 
 const CardWrapper = styled('div')`
   display: grid;
-  grid-template-row: 1fr;
   grid-gap: 10px;
   padding: 0 10px;
 `;
