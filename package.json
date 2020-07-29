@@ -28,8 +28,12 @@
     "eject": "react-scripts eject",
     "book": "start-storybook -p 9009",
     "build-storybook": "build-storybook",
-    "lint": "eslint --fix ."
+    "lint": "eslint --fix .",
+    "prepare": "yarn run build"
   },
+  "files": [
+    "dist"
+  ],
   "husky": {
     "hooks": {
       "pre-commit": "yarn lint",
