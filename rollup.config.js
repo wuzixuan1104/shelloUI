@@ -3,6 +3,7 @@ import resolve from '@rollup/plugin-node-resolve';
 import commonjs from '@rollup/plugin-commonjs';
 import url from '@rollup/plugin-url';
 import pkg from './package.json';
+import svgr from '@svgr/rollup';
 
 export default {
   input: 'src/stories/index.js',
@@ -27,5 +28,6 @@ export default {
     }),
     commonjs(),
     url(),
+    svgr(),
   ],
 };
