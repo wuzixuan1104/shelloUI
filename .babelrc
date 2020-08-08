@@ -3,13 +3,25 @@
     [
       "@babel/env",
       {
+        "targets": {
+          "node": 6
+        },
         "modules": false // 因為 rollup 會處理 es6 模板語法，其餘的 es6 語法才由 babel 處理
       }
     ],
-    "@babel/preset-react"
+    "@babel/react"
   ],
   "plugins": [
-    "@babel/plugin-external-helpers", // 避免每個模塊頭部重複引用相同 helper 方法，只需要在構建完成的 bundle 頭部引入一次，
+    [
+      "@babel/plugin-transform-runtime",
+      {
+        "corejs": false,
+        "helpers": true,
+        "regenerator": false,
+        "useESModules": true
+      }
+    ],
+    // "@babel/plugin-external-helpers", // 避免每個模塊頭部重複引用相同 helper 方法，只需要在構建完成的 bundle 頭部引入一次，
     "babel-plugin-styled-components"
   ]
 }

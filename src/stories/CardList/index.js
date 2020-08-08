@@ -11,7 +11,7 @@ import { ReactComponent as PlusIcon } from '../../icons/outline-plus.svg';
 import Card from '../Card';
 
 const CardList = ({ lists, title, width }) => {
-  const [add, setAdd] = useState(false);
+  const [add, setAdd] = useState('');
   const handleHover = () => {
     setAdd((prev) => !prev);
   };

@@ -26,11 +26,10 @@ export default {
     'styled-components',
     'lodash',
   ],
-  globals: { 'styled-components': 'styled', lodash: '_' },
   plugins: [
     babel({
-      babelHelpers: 'external',
       exclude: ['node_modules/**', '**/*.json'],
+      babelHelpers: 'runtime',
     }),
     url(),
     svgr(),
