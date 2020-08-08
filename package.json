@@ -23,9 +23,6 @@
     "type": "git",
     "url": "https://github.com/wuzixuan1104/shelloUI.git"
   },
-  "files": [
-    "dist"
-  ],
   "scripts": {
     "build": "rollup -c",
     "start": "rollup -c -w",
@@ -33,9 +30,12 @@
     "eject": "react-scripts eject",
     "book": "start-storybook -p 9009",
     "build-storybook": "build-storybook",
-    "lint": "eslint --fix ."
+    "lint": "eslint --fix .",
+    "prepare": "yarn run build && yarn book"
   },
-  "file": {},
+  "files": [
+    "dist"
+  ],
   "husky": {
     "hooks": {
       "pre-commit": "yarn lint",

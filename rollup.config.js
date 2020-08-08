@@ -29,5 +29,6 @@ export default {
     commonjs(),
     svgr(),
     url(),
+    svgr(),
   ],
 };
