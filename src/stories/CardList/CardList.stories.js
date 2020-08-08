@@ -2,7 +2,6 @@ import React from 'react';
 import { storiesOf } from '@storybook/react';
 
 import CardList from './index';
-import Card from '../Card/index';
 
 const cardDemo = [
   {
@@ -25,11 +24,7 @@ const cardDemo = [
 storiesOf('CardList', module).add('Basic', () => {
   return (
     <React.Fragment>
-      <CardList title={'Shello 的起源'}>
-        {cardDemo.map((v, i) => (
-          <Card key={i} {...v}></Card>
-        ))}
-      </CardList>
+      <CardList title={'Shello 的起源'} lists={cardDemo}></CardList>
     </React.Fragment>
   );
 });
