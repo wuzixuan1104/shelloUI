@@ -31,7 +31,7 @@
     "book": "start-storybook -p 9009",
     "build-storybook": "build-storybook",
     "lint": "eslint --fix .",
-    "prepare": "yarn run build && yarn book"
+    "prepare": "yarn run build"
   },
   "files": [
     "dist"

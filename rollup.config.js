@@ -4,6 +4,7 @@ import commonjs from '@rollup/plugin-commonjs';
 import url from '@rollup/plugin-url';
 import pkg from './package.json';
 import svgr from '@svgr/rollup';
+
 export default {
   input: 'src/stories/index.js',
   output: [
@@ -18,17 +19,22 @@ export default {
       sourcemap: true,
     },
   ],
-  external: ['react', 'react-dom', 'styled-components'],
-
+  external: [
+    'react',
+    'react-dom',
+    'react-proptypes',
+    'styled-components',
+    'lodash',
+  ],
+  globals: { 'styled-components': 'styled', lodash: '_' },
   plugins: [
-    resolve(),
     babel({
       babelHelpers: 'external',
       exclude: ['node_modules/**', '**/*.json'],
     }),
-    commonjs(),
-    svgr(),
     url(),
     svgr(),
+    resolve(),
+    commonjs(),
   ],
 };
