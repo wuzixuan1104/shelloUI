@@ -3,7 +3,7 @@ import resolve from '@rollup/plugin-node-resolve';
 import commonjs from '@rollup/plugin-commonjs';
 import url from '@rollup/plugin-url';
 import pkg from './package.json';
-
+import svgr from '@svgr/rollup';
 export default {
   input: 'src/stories/index.js',
   output: [
@@ -19,6 +19,7 @@ export default {
     },
   ],
   external: ['react', 'react-dom', 'styled-components'],
+
   plugins: [
     resolve(),
     babel({
@@ -26,6 +27,7 @@ export default {
       exclude: ['node_modules/**', '**/*.json'],
     }),
     commonjs(),
+    svgr(),
     url(),
   ],
 };

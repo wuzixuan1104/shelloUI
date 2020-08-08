@@ -1,16 +1,18 @@
 {
-  "name": "chatUI",
+  "name": "shelloUI",
   "version": "0.1.0",
   "author": "shari",
   "license": "MIT",
   "main": "dist/index.js",
   "module": "dist/index.es.js",
+  "jsnext:main": "dist/index.es.js",
   "engines": {
     "node": ">=8",
     "npm": ">=5"
   },
   "dependencies": {
     "@storybook/theming": "^5.3.19",
+    "@svgr/rollup": "^5.4.0",
     "@testing-library/jest-dom": "^4.2.4",
     "@testing-library/react": "^9.3.2",
     "@testing-library/user-event": "^7.1.2",
@@ -19,8 +21,11 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/wuzixuan1104/chatUI.git"
+    "url": "https://github.com/wuzixuan1104/shelloUI.git"
   },
+  "files": [
+    "dist"
+  ],
   "scripts": {
     "build": "rollup -c",
     "start": "rollup -c -w",
@@ -30,6 +35,7 @@
     "build-storybook": "build-storybook",
     "lint": "eslint --fix ."
   },
+  "file": {},
   "husky": {
     "hooks": {
       "pre-commit": "yarn lint",
